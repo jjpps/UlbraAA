@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="UlbraAA_C_.App" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AwAgKSAIAAAAhAEAAAAAAAAAAAAAEQAAAAgAAIIAAUA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UlbraAA_C_.aulas" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>KABAAAAAAAAACAAAAAgAAAAAQACAAABAQAIAAAgAKAA=</HashCode>
+      <FileName>aulas.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UlbraAA_C_.help" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>help.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UlbraAA_C_.IsolatedStoreSettings" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAABAAAAAAA=</HashCode>
+      <FileName>IsolatedStoreSettings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UlbraAA_C_.LocalizedStrings" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>LocalizedStrings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UlbraAA_C_.MainPage">
+    <Position X="9.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAEAAAAAAAEAAAoAIACgQAAAAAAQAAIAAAggAAA=</HashCode>
+      <FileName>MainPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UlbraAA_C_.Menu" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAgAAAAAAEAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Menu.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UlbraAA_C_.Notas" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgIAAAAgAAAAAAQAAgAAAAAAAAAAAAAACCAAIgAgAA=</HashCode>
+      <FileName>Notas.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UlbraAA_C_.Notas2" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAgAAAAQAgAAAAAQCAAEAAAAAAAAAQAAAAAAAAgABAA=</HashCode>
+      <FileName>Notas2.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UlbraAA_C_.NotasFinal" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAIAAAAAAEAAAAAAAAAAAAAAAABAAAAAAAAAUA=</HashCode>
+      <FileName>NotasFinal.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UlbraAA_C_.Classes.clsAula" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACgAAAAACAACAAAAAAAAAAAAACAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Classes\clsAula.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UlbraAA_C_.Classes.clsConexao">
+    <Position X="11.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQABAAAAgACAIAQACAAAAAAAgAAAAAAAAAAAEA=</HashCode>
+      <FileName>Classes\clsConexao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UlbraAA_C_.Classes.clsDisciplinas" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAIAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Classes\clsDisciplinas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UlbraAA_C_.Classes.clsGraus" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Classes\clsGraus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UlbraAA_C_.Classes.clsPeriodos" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Classes\clsPeriodos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UlbraAA_C_.Classes.clsUser" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ARAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Classes\clsUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UlbraAA_C_.DB.ClsCurso" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ARACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DB\ClsCurso.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UlbraAA_C_.DB.ClsCursoDB" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAgAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>DB\ClsCursoDB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UlbraAA_C_.DB.ClsDB" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DB\ClsDB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UlbraAA_C_.DB.ClsDisciplina" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQACAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DB\ClsDisciplina.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UlbraAA_C_.DB.ClsGrau" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>DB\ClsGrau.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UlbraAA_C_.DB.ClsPeriodos" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DB\ClsPeriodos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UlbraAA_C_.Resources.AppResources" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgCAAAAAAABEIAAAQAAAAAAAAAAAAIAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

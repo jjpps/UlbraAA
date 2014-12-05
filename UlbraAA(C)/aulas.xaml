@@ -1,0 +1,74 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="UlbraAA_C_.aulas"
+     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True" d:DesignHeight="768" d:DesignWidth="480" Background="White">
+    <phone:PhoneApplicationPage.Resources>
+        <DataTemplate x:Name="lpkFullItemTemplate">
+            <TextBlock Text="{Binding Campo}" Foreground="Black" />
+        </DataTemplate>
+
+        <DataTemplate x:Name="localFullItemTemplate">
+            <TextBlock Text="{Binding Local}" Foreground="Black"/>
+        </DataTemplate>
+
+        <DataTemplate x:Name="idiomaFullItemTemplate">
+            <TextBlock Text="{Binding Idioma}" Foreground="Black"/>
+        </DataTemplate>
+
+        <DataTemplate x:Name="materFullItemTemplate">
+            <TextBlock Text="{Binding Mater}" Foreground="Black"/>
+        </DataTemplate>
+    </phone:PhoneApplicationPage.Resources>
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="White" Height="768" Width="480" OpacityMask="{x:Null}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <Image Source="Assets/Imagens/logoAA.png" Height="102"></Image>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Grid.Background>
+                <ImageBrush ImageSource="Assets/Imagens/rosa_trans_fundo.png"/>
+            </Grid.Background>
+            <Rectangle Fill="#FFF4F4F5" Margin="22,147,24,190" Stroke="Black"/>
+            <TextBlock Margin="34,157,320,432" TextWrapping="Wrap" Text="Disciplina:" Foreground="#FF060606" FontWeight="Bold"/>
+            <TextBlock Margin="136,157,40,405" TextWrapping="Wrap" Text="" x:Name="txtDisciplina" Foreground="Black" FontSize="20"  />
+            <TextBlock HorizontalAlignment="Left" Margin="34,287,0,300" TextWrapping="Wrap" Text="Dia:" Width="39" Foreground="Black" RenderTransformOrigin="0.422,0.537" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left" Margin="34,353,0,0" TextWrapping="Wrap" Text="Sala:" VerticalAlignment="Top" Height="29" Width="47" Foreground="Black" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left"  x:Name="txtpredio"  Margin="104,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="312" Height="61" Foreground="Black" FontSize="20"/>
+            <TextBlock HorizontalAlignment="Left" x:Name="txtsala" Margin="82,353,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="65" Width="334" Foreground="Black" RenderTransformOrigin="0.492,0.415"/>
+            <TextBlock HorizontalAlignment="Left" Margin="78,287,0,0" TextWrapping="Wrap" x:Name="txtdia" VerticalAlignment="Top" Foreground="Black" Height="61" Width="338" FontSize="20"/>
+            <TextBlock HorizontalAlignment="Left" Margin="34,221,0,0" TextWrapping="Wrap" Text="Prédio:" VerticalAlignment="Top" Width="70" Foreground="Black" Height="32" FontWeight="Bold"/>
+            <toolkit:ListPicker FullModeItemTemplate="{Binding lpkFullItemTemplate}" ItemTemplate="{Binding lpkItemTemplate}" x:Name="lpkCampo"  Visibility="Visible" Margin="0,10,0,76" BorderBrush="#FF7C7C7C" SelectionChanged="lpkCampo_SelectionChanged" Background="White" Foreground="#FF040404"/>
+
+        </Grid>
+        
+    
+    </Grid>
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" ForegroundColor="White" BackgroundColor="#FF385A76">
+            <shell:ApplicationBarIconButton Click="ApplicationBarIconButton_Click_1" IconUri="Assets/Imagens/appbar.information.circle.png" Text="Info"/>
+
+
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</phone:PhoneApplicationPage>

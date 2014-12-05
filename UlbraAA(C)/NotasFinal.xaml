@@ -1,0 +1,46 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="UlbraAA_C_.NotasFinal"
+   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True" Background="White" Foreground="Black">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <Image Source="Assets/Imagens/logoAA.png" Height="108" Margin="0,0,10,0"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Grid.Background>
+                <ImageBrush Stretch="Fill" ImageSource="Assets/Imagens/rosa_trans_fundo.png"/>
+            </Grid.Background>
+            <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="487" Margin="25,95,0,0" Stroke="Black" VerticalAlignment="Top" Width="406" Opacity="0.5"/>
+            <TextBlock x:Name="txtGfinal" HorizontalAlignment="Left" Margin="258,4,0,0" TextWrapping="Wrap" Text="5,0" VerticalAlignment="Top" FontSize="50" Width="188" TextAlignment="Center" Height="66"/>
+            <TextBlock x:Name="txtGfinalT" HorizontalAlignment="Left" Margin="258,-20,0,0" TextWrapping="Wrap" Text="Nota Final:" VerticalAlignment="Top" FontSize="28" Width="188" TextAlignment="Center"/>
+            <ListBox x:Name="lstNotasGral" Margin="40,110,39,52">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}" Foreground="Black" FontSize="40"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <TextBlock x:Name="txtNome" HorizontalAlignment="Left" Margin="25,-10,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="80" Width="228" FontSize="20" FontWeight="Bold"/>
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>
