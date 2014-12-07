@@ -18,10 +18,10 @@ namespace UlbraAA_C_.DB
            }
            return db;
        }
-       public static List<Disciplina> GetDisciplina(string idPeriodo)
+       public static List<Disciplina> GetDisciplina(int idPeriodo)
        {
            database db = getDataBase();
-           var query = from d in db.Disciplina where d.idPeriodo == idPeriodo select d;
+           var query = from d in db.Disciplina where d.idPeriodo == idPeriodo.ToString() select d;
            List<Disciplina> disciplina = new List<Disciplina>(query.AsEnumerable());
            return disciplina;
 

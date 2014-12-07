@@ -14,6 +14,7 @@ namespace UlbraAA_C_
        public static string IdMateria;
        public static List<string> NomeMateriaDB;
        public static List<string> GrauFinalDB;
+       public static bool ctDB;
     }
 }
 ;

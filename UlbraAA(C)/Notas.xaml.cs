@@ -22,9 +22,8 @@ namespace UlbraAA_C_
             
             InitializeComponent();
             selindex_new = 0;
-            selindex_old = 0;            
-            EscreCurso();
-            
+            selindex_old = 0;
+            verificaDB();
         }
         
 
@@ -40,6 +39,13 @@ namespace UlbraAA_C_
       
         
         #endregion
+
+        protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)
+        {
+
+            abrepagina("/Menu.xaml");
+        }
+        
 
         //metodos
 
@@ -112,14 +118,32 @@ namespace UlbraAA_C_
 
         private void lpkCurso_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            this.txtsituacao.Text = (Application.Current as App).user[lpkCurso.SelectedIndex].situacao;
-
-            if ((Application.Current as App).user[lpkCurso.SelectedIndex].situacao == "ATIVO")
+            if (ClsGlobal.ctDB == true)
             {
-                txtsituacao.Foreground = new SolidColorBrush(Colors.Green);
+                foreach (Curso  c in CursoRepositorio.GetCurso())
+                {
+                    this.txtsituacao.Text = c.situacao;
+                    if (c.situacao == "ATIVO")
+                    {
+                        txtsituacao.Foreground = new SolidColorBrush(Colors.Green);
+                    }
+                    else
+                    {
+                        txtsituacao.Foreground = new SolidColorBrush(Colors.Red);
+                    }
+                }
+
             }
-            else
-                txtsituacao.Foreground = new SolidColorBrush(Colors.Red);
+            else {
+                this.txtsituacao.Text = (Application.Current as App).user[lpkCurso.SelectedIndex].situacao;
+
+                if ((Application.Current as App).user[lpkCurso.SelectedIndex].situacao == "ATIVO")
+                {
+                    txtsituacao.Foreground = new SolidColorBrush(Colors.Green);
+                }
+                else
+                    txtsituacao.Foreground = new SolidColorBrush(Colors.Red);
+            }
         }
 
 
@@ -137,7 +161,8 @@ namespace UlbraAA_C_
             Curso c = new Curso();
             c.id = UserP.id;
             c.nome = UserP.nome;
-            c.situacao = UserP.situacao;            
+            c.situacao = UserP.situacao;
+            ClsGlobal.IdCurso = UserP.id;
             CursoRepositorio.create(c);
             
             
@@ -153,7 +178,9 @@ namespace UlbraAA_C_
                 {
                     IdCurso = UserP.id,
                     periodo = p.periodo
+                    
                 };
+                
 
                 foreach (var d in p.disciplinas)
                 {
@@ -212,6 +239,19 @@ namespace UlbraAA_C_
             
 
         }
+
+        public void verificaDB()
+        {
+            if (ClsGlobal.ctDB == true)
+            {
+                EscreCursoDB();
+            }
+            else {
+                EscreCurso();
+            }
+        
+        }
+    
     }
 
     

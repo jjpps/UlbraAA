@@ -21,6 +21,10 @@ namespace UlbraAA_C_
             //prgBar.Visibility = Visibility.Collapsed;
             
         }
+        protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)
+        {
+            Application.Current.Terminate();
+        }
         private void abrepagina(string destino)
         {
             this.NavigationService.Navigate(new Uri(destino, UriKind.Relative));

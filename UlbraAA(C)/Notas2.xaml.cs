@@ -18,8 +18,8 @@ namespace UlbraAA_C_
         public Notas2()
         {
             InitializeComponent();
-            escreveperiodos();
-            getMat();
+            verificaDB();
+            
         }
 
         //variaves
@@ -36,6 +36,7 @@ namespace UlbraAA_C_
         List<string> NomeMat = new List<string>();
         List<string> _periodosDB = new List<string>();
         List<string> NomeMatDB = new List<string>();
+        
         #endregion
 
 
@@ -60,7 +61,7 @@ namespace UlbraAA_C_
         public void getMatDB() 
         {
             NomeMatDB.Clear();
-            foreach (Disciplina d in DisciplinaRepositorio.GetDisciplina(ClsGlobal.IdPerido))
+            foreach (Disciplina d in DisciplinaRepositorio.GetDisciplina(selindex_periodo))//muda pra peridoo
             {
                 ClsGlobal.NomeMateriaDB.Add(d.nome);
                 ClsGlobal.GrauFinalDB.Add(d.grauFinal);
@@ -70,6 +71,8 @@ namespace UlbraAA_C_
             }
             lstMat.ItemsSource = null;
             lstMat.ItemsSource = NomeMatDB;
+
+            
        
         }
 
@@ -77,7 +80,7 @@ namespace UlbraAA_C_
 
         public void escreveperiodosDB() 
         {
-            List<string> _periodosDB = new List<string>();
+            
             foreach (Periodo p in PeriodoRepositorio.GetPeriodo(ClsGlobal.IdCurso))
             {
                 _periodosDB.Add(p.periodo);
@@ -90,6 +93,8 @@ namespace UlbraAA_C_
             foreach (clsPeriodos pperiodo in (Application.Current as App).user[(Application.Current as App).curso].periodos)
             {
                 _periodos.Add(pperiodo.periodo);
+                
+                
             }
 
             lpkCurso.ItemsSource = _periodos;
@@ -97,7 +102,19 @@ namespace UlbraAA_C_
         }//escreve periodo 
         #endregion
 
-
+        public void verificaDB() 
+        {
+            if (ClsGlobal.ctDB == true)
+            {
+                escreveperiodosDB();
+                getMatDB();
+            }
+            else 
+            {
+                escreveperiodos();
+                getMat();
+            }
+        }
         //eventos
 
         #region Eventos
@@ -110,7 +127,14 @@ namespace UlbraAA_C_
         {
             controle = false;
             selindex_periodo = lpkCurso.SelectedIndex;
-            getMat();
+            if (ClsGlobal.ctDB == true)
+            {
+                getMatDB();
+            }
+            else
+            {
+                getMat();
+            }
         }
 
         private void lstMat_SelectionChanged(object sender, SelectionChangedEventArgs e)
