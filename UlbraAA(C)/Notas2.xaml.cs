@@ -65,6 +65,7 @@ namespace UlbraAA_C_
             lstMat.ItemsSource = null;
           
             string x = _periodosDB[selindex_periodo].ToString();
+            lstMat.Items.Clear();
             foreach (Disciplina d in DisciplinaRepositorio.GetDisciplina(x))//PERDENDO ID
             {
                 
@@ -85,7 +86,7 @@ namespace UlbraAA_C_
 
         public void escreveperiodosDB() 
         {
-            
+            lpkCurso.Items.Clear();
             foreach (Periodo p in PeriodoRepositorio.GetPeriodo(ClsGlobal.IdCurso))
             {
                 _periodosDB.Add(p.periodo);

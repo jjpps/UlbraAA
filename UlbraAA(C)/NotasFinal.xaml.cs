@@ -54,7 +54,7 @@ namespace UlbraAA_C_
             txtGfinal.Text = ClsGlobal.GrauFinalDB;
             txtNome.Text = ClsGlobal.NomeMateria;
             //grau finall
-            
+            lstNotasGral.Items.Clear();
             foreach (Graus g in GrausRepositorio.GetGraus(ClsGlobal.IdMateria))
             {
                

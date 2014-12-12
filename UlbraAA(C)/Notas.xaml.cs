@@ -220,6 +220,7 @@ namespace UlbraAA_C_
         public  void EscreCursoDB() 
         {
             List<string> _situacaoDB = new List<string>();
+            lpkCurso.Items.Clear();
             foreach (Curso c in CursoRepositorio.GetCurso())
             {
                 ClsGlobal.IdCurso = c.id;
