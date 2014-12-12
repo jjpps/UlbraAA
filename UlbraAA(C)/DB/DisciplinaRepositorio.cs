@@ -33,5 +33,10 @@ namespace UlbraAA_C_.DB
            db.Disciplina.InsertOnSubmit(d);
            db.SubmitChanges();
        }
+       public static void DropDisciplina() 
+       {
+           database db = getDataBase();
+           db.DeleteDatabase();
+       }
     }
 }

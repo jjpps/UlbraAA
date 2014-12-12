@@ -35,6 +35,12 @@ namespace UlbraAA_C_.DB.Classes
            db.Curso.InsertOnSubmit(c);
            db.SubmitChanges();
        }
+       public static void DropCurso() 
+       {
+           database db = getDataBase();
+           db.DeleteDatabase();
+           
+       }
 
 
 

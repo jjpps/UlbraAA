@@ -33,5 +33,11 @@ namespace UlbraAA_C_.DB
             db.Periodo.InsertOnSubmit(p);
             db.SubmitChanges();
         }
+        public static void DropPeriodo() 
+        {
+            database db = getDataBase();
+            db.DeleteDatabase();
+        
+        }
     }
 }

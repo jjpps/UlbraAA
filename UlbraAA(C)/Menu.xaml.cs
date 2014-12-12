@@ -33,7 +33,18 @@ namespace UlbraAA_C_
 
         private void image1_Tap_1(object sender, System.Windows.Input.GestureEventArgs e)
         {
-            abrepagina("/aulas.xaml");
+            ContentPanel.Visibility = Visibility.Collapsed;
+            prgBar.Visibility = Visibility.Visible;
+            if (ClsGlobal.ctDB == true) 
+            {
+                MessageBox.Show("Essa Função Não Esta Disponivel Em Modo Offline ");
+                prgBar.Visibility = Visibility.Collapsed;
+                ContentPanel.Visibility = Visibility.Visible;
+            } else 
+            {
+                abrepagina("/aulas.xaml");
+            }
+           
         }
 
 

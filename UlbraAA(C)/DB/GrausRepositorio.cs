@@ -32,5 +32,10 @@ namespace UlbraAA_C_.DB
            db.Graus.InsertOnSubmit(g);
            db.SubmitChanges();
        }
+       public static void DropGraus()
+       {
+           database db = getDataBase();
+           db.DeleteDatabase();
+       }
     }
 }
