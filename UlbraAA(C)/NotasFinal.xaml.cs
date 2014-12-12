@@ -17,13 +17,7 @@ namespace UlbraAA_C_
         public NotasFinal()
         {
             InitializeComponent();
-            #region Preenche as Lists
-            user = (Application.Current as App).user;
-            periodo = (Application.Current as App).periodo;
-            cadeira = (Application.Current as App).cadeira;
-            curso = (Application.Current as App).curso; 
-            #endregion
-            getAula();
+            verificaDB();
         }
 
         //listas
@@ -57,9 +51,10 @@ namespace UlbraAA_C_
         }
         void getAulaDB()
         {
-            txtNome.Text = ClsGlobal.NomeMateriaDB[cadeira];
+            
             //grau finall
-            foreach (Graus g in GrausRepositorio.GetGraus(ClsGlobal.IdMateria))
+            
+            foreach (Graus g in GrausRepositorio.GetGraus(ClsGlobal.IdDisciplina.ToString()))
             {
                 lstNotasDB.Add(g.nome + ":" + g.nota.ToString());
             }
@@ -67,6 +62,24 @@ namespace UlbraAA_C_
 
         
 
+        }
+
+        public void verificaDB()
+        {
+            if (ClsGlobal.ctDB == true)
+            {
+                getAulaDB();
+            }
+            else
+            {
+                #region Preenche as Lists
+                user = (Application.Current as App).user;
+                periodo = (Application.Current as App).periodo;
+                cadeira = (Application.Current as App).cadeira;
+                curso = (Application.Current as App).curso;
+                #endregion
+                getAula();
+            }
         }
     }
 }

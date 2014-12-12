@@ -26,6 +26,7 @@ namespace UlbraAA_C_
 
         int selindex_periodo = 0;
         bool controle = false;
+
        
 
         //listas
@@ -35,7 +36,7 @@ namespace UlbraAA_C_
         List<string> _periodos = new List<string>();
         List<string> NomeMat = new List<string>();
         List<string> _periodosDB = new List<string>();
-        List<string> NomeMatDB = new List<string>();
+        List<Disciplina> NomeMatDB = new List<Disciplina>();
         
         #endregion
 
@@ -61,16 +62,20 @@ namespace UlbraAA_C_
         public void getMatDB() 
         {
             NomeMatDB.Clear();
-            foreach (Disciplina d in DisciplinaRepositorio.GetDisciplina(selindex_periodo))//muda pra peridoo
+            lstMat.ItemsSource = null;
+          
+            string x = _periodosDB[selindex_periodo].ToString();
+            foreach (Disciplina d in DisciplinaRepositorio.GetDisciplina(x))//PERDENDO ID
             {
-                ClsGlobal.NomeMateriaDB.Add(d.nome);
+
                 ClsGlobal.GrauFinalDB.Add(d.grauFinal);
-                ClsGlobal.IdMateria = d.id;
-                NomeMatDB.Add(d.nome);
+                NomeMatDB.Add(d);
+               
                 
             }
             lstMat.ItemsSource = null;
             lstMat.ItemsSource = NomeMatDB;
+            controle = true;
 
             
        
@@ -127,6 +132,7 @@ namespace UlbraAA_C_
         {
             controle = false;
             selindex_periodo = lpkCurso.SelectedIndex;
+            
             if (ClsGlobal.ctDB == true)
             {
                 getMatDB();
@@ -141,8 +147,10 @@ namespace UlbraAA_C_
         {
             if (controle==true)
             {
+
                 (Application.Current as App).cadeira = lstMat.SelectedIndex;
                 (Application.Current as App).periodo = selindex_periodo;
+               
                 abrepagina("/NotasFinal.xaml");
             }
         } 
