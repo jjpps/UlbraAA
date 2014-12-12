@@ -151,11 +151,15 @@ namespace UlbraAA_C_
 
                 (Application.Current as App).cadeira = lstMat.SelectedIndex;
                 (Application.Current as App).periodo = selindex_periodo;
-                int x = lstMat.SelectedIndex;
-                string z = NomeMatDB[x].id;
-                ClsGlobal.NomeMateria = NomeMatDB[x].nome;
-                ClsGlobal.GrauFinalDB = NomeMatDB[x].grauFinal;
-                ClsGlobal.IdMateria = z;
+
+                if (ClsGlobal.ctDB == true)
+                {
+                    string z = NomeMatDB[lstMat.SelectedIndex].id;
+                    ClsGlobal.NomeMateria = NomeMatDB[lstMat.SelectedIndex].nome;
+                    ClsGlobal.GrauFinalDB = NomeMatDB[lstMat.SelectedIndex].grauFinal;
+                    ClsGlobal.IdMateria = z;
+
+                }
                
               
                 abrepagina("/NotasFinal.xaml");

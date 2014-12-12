@@ -36,7 +36,10 @@ namespace UlbraAA_C_.DB
        public static void DropDisciplina() 
        {
            database db = getDataBase();
-           db.DeleteDatabase();
+           if (db.DatabaseExists() == true)
+           {
+               db.DeleteDatabase();
+           }
        }
     }
 }

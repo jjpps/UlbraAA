@@ -38,7 +38,10 @@ namespace UlbraAA_C_.DB.Classes
        public static void DropCurso() 
        {
            database db = getDataBase();
-           db.DeleteDatabase();
+           if (db.DatabaseExists() == true) 
+           {
+               db.DeleteDatabase();
+           }
            
        }
 

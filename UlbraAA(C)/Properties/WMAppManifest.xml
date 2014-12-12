@@ -2,7 +2,7 @@
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="pt-BR" />
   <App xmlns="" ProductID="{d0e5f164-2dcb-4952-89fc-4ead68e50684}" Title="Ulbra Auto Atendimento" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="JP" Description="Sample description" Publisher="UlbraAA_C_" PublisherID="{2206edbe-13a6-464f-95ec-10a024fe7fcd}">
-    <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
+    <IconPath IsRelative="true" IsResource="false">ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
       <Capability Name="ID_CAP_MEDIALIB_AUDIO" />
@@ -16,9 +16,9 @@
     <Tokens>
       <PrimaryToken TokenID="UlbraAA_C_Token" TaskName="_default">
         <TemplateFlip>
-          <SmallImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileSmall.png</SmallImageURI>
+          <SmallImageURI IsRelative="true" IsResource="false">ApplicationIcon(Small).png</SmallImageURI>
           <Count>0</Count>
-          <BackgroundImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileMedium.png</BackgroundImageURI>
+          <BackgroundImageURI IsRelative="true" IsResource="false">JP.png</BackgroundImageURI>
           <Title>UlbraAA</Title>
           <BackContent>
           </BackContent>

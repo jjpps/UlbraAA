@@ -35,7 +35,10 @@ namespace UlbraAA_C_.DB
        public static void DropGraus()
        {
            database db = getDataBase();
-           db.DeleteDatabase();
+           if (db.DatabaseExists() == true)
+           {
+               db.DeleteDatabase();
+           }
        }
     }
 }
