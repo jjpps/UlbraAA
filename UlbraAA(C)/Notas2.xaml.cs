@@ -67,8 +67,8 @@ namespace UlbraAA_C_
             string x = _periodosDB[selindex_periodo].ToString();
             foreach (Disciplina d in DisciplinaRepositorio.GetDisciplina(x))//PERDENDO ID
             {
-
-                ClsGlobal.GrauFinalDB.Add(d.grauFinal);
+                
+                
                 NomeMatDB.Add(d);
                
                 
@@ -150,7 +150,13 @@ namespace UlbraAA_C_
 
                 (Application.Current as App).cadeira = lstMat.SelectedIndex;
                 (Application.Current as App).periodo = selindex_periodo;
+                int x = lstMat.SelectedIndex;
+                string z = NomeMatDB[x].id;
+                ClsGlobal.NomeMateria = NomeMatDB[x].nome;
+                ClsGlobal.GrauFinalDB = NomeMatDB[x].grauFinal;
+                ClsGlobal.IdMateria = z;
                
+              
                 abrepagina("/NotasFinal.xaml");
             }
         } 

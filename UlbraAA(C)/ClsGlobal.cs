@@ -13,9 +13,10 @@ namespace UlbraAA_C_
        public static string IdPerido;
        public static string IdMateria;
        public static string NomeMateriaDB;
-       public static List<string> GrauFinalDB;
+       public static string GrauFinalDB;
        public static bool ctDB;
-       public static int IdDisciplina;
+       public static string NomeMateria;
+       
        
     }
 }

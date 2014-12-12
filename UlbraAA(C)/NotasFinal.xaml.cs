@@ -51,14 +51,18 @@ namespace UlbraAA_C_
         }
         void getAulaDB()
         {
-            
+            txtGfinal.Text = ClsGlobal.GrauFinalDB;
+            txtNome.Text = ClsGlobal.NomeMateria;
             //grau finall
             
-            foreach (Graus g in GrausRepositorio.GetGraus(ClsGlobal.IdDisciplina.ToString()))
+            foreach (Graus g in GrausRepositorio.GetGraus(ClsGlobal.IdMateria))
             {
+               
                 lstNotasDB.Add(g.nome + ":" + g.nota.ToString());
             }
             lstNotasGral.ItemsSource = lstNotasDB;
+           
+            
 
         
 
