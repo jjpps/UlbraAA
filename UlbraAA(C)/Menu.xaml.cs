@@ -61,6 +61,13 @@ namespace UlbraAA_C_
             abrepagina("/Info.xaml");
         }
 
+        private void ApplicationBarIconButton_Click(object sender, EventArgs e)
+        {
+            AppSettings.remove();
+            Application.Current.Terminate();
+
+        }
+
        
 
        

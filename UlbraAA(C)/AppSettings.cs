@@ -44,12 +44,9 @@ namespace UlbraAA_C_
         
         }
 
-        public void remove()
+        public static void remove()
         {
-            if (IsolatedStorageSettings.ApplicationSettings.Contains("md5"))
-            {
-                IsolatedStorageSettings.ApplicationSettings.Remove("md5");
-            }
+            IsolatedStorageSettings.ApplicationSettings.Remove("md5");
         }
 
     }
